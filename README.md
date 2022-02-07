@@ -1,5 +1,7 @@
 # Recipmes Back-end
 
+Manage your recipes, groceries, and ingredients.
+
 ## How to Run Locally
 
 1. Clone repo

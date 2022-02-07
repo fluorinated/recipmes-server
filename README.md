@@ -10,5 +10,5 @@ Manage your recipes, groceries, and ingredients.
 
 1. Clone repo
 2. Run `npm i`
-3. Run `node server`
+3. Run `npm run start`
 4. Navigate to `localhost:1337`

@@ -42,11 +42,7 @@ if (!test) {
 
 // Parse Server plays nicely with the rest of your web routes
 app.get("/", function (req, res) {
-  res
-    .status(200)
-    .send(
-      "I dream of being a website.  Please start the parse-server repo on GitHub!"
-    );
+  res.status(200).send("Recipmes Server - /parse");
 });
 
 // There will be a test page available on the /test path of your server url

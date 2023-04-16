@@ -64,4 +64,5 @@ if (!test) {
 module.exports = {
   app,
   config,
+  router,
 };

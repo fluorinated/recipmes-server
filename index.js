@@ -8,7 +8,7 @@ const args = process.argv || [];
 const test = args.some((arg) => arg.includes("jasmine"));
 
 const databaseUri =
-  "mongodb+srv://adminmd1997:adminmunki619@cluster0.ljzut.mongodb.net/recipmes?retryWrites=true&w=majority";
+  "mongodb+srv://adminmd1997:adminmunki619@cluster0.driym.mongodb.net/recipmes?retryWrites=true&w=majority";
 
 if (!databaseUri) {
   console.log("DATABASE_URI not specified, falling back to localhost.");

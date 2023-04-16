@@ -34,11 +34,11 @@ const app = express();
 app.use("/public", express.static(path.join(__dirname, "/public")));
 
 // Serve the Parse API on the /parse URL prefix
-const mountPath = process.env.PARSE_MOUNT || "/parse";
 if (!test) {
+  const mountPath = process.env.PARSE_MOUNT || "/parse";
   const api = new ParseServer(config);
-  await api.start();
-  app.use(mountPath, api);
+  api.start();
+  app.use(mountPath, api.app);
 }
 
 // Parse Server plays nicely with the rest of your web routes

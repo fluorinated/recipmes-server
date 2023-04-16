@@ -37,6 +37,7 @@ app.use("/public", express.static(path.join(__dirname, "/public")));
 const mountPath = process.env.PARSE_MOUNT || "/parse";
 if (!test) {
   const api = new ParseServer(config);
+  await api.start();
   app.use(mountPath, api);
 }
 
@@ -51,8 +52,8 @@ app.get("/test", function (req, res) {
   res.sendFile(path.join(__dirname, "/public/test.html"));
 });
 
-const port = process.env.PORT || 1337;
 if (!test) {
+  const port = process.env.PORT || 1337;
   const httpServer = require("http").createServer(app);
   httpServer.listen(port, function () {
     console.log("parse-server-example running on port " + port + ".");
